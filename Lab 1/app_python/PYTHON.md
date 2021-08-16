@@ -8,6 +8,6 @@
 - `requirements.txt` mentions necessary modules.
 - _Virtual Environment_ protects from library clashes.
 - _Documentation_ helps others to understand the code.
-- _Methods_ organize code into concise reusable parts.
+- _Modules_ and _functions_ organize code into concise reusable parts.
 - _autopep8_ facilitates code quality through linting.
 - _worldtimeapi.org_ endpoint ensures data integrity.
