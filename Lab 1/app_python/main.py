@@ -10,4 +10,4 @@ def show_time():
     Fetch Moscow time string and display it in a paragraph
     '''
     time = get_time_string('Europe/Moscow')
-    return f"<p>Time in Moscow: {time}</p>"
+    return f"<p>Time in Moscow</p><p>{time}</p>"
