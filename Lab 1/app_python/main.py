@@ -1,5 +1,5 @@
 from flask import Flask
-from word_time import get_time_string
+from world_time import get_time_string
 
 app = Flask(__name__)
 
