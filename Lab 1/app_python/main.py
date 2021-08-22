@@ -11,3 +11,7 @@ def show_time():
     '''
     time = get_time_string('Europe/Moscow')
     return f"<p>Time in Moscow</p><p>{time}</p>"
+
+
+if __name__ == '__main__':
+    app.run('0.0.0.0', 5000)
