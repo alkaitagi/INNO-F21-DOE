@@ -1,4 +1,4 @@
-# Best Practises
+# Python best practises used
 
 - _Flask_ adapts python for web-development.
 - _Git_ is used for version control.
