@@ -4,7 +4,7 @@ This is a simple python web application for displaying current Moscow time on pa
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Mount the virtual environment and install the packages.
 
 ```bash
 python -m venv venv
@@ -13,23 +13,18 @@ pip install -r requirements.txt
 
 ## Usage
 
-Either run the app directly from the command line:
+There are several ways to run the app
 
 ```bash
+# direct python launch
 python app.py
-```
 
-or using the flask command:
-
-```bash
+# or running the flask
 flask run
-```
 
-or use the provided Dockerfile:
-
-```bash
-docker build -t python-app .
-docker run -d -p 5000:5000 python-app
+# or building the docker image
+docker build -t doe-lab2 .
+docker run -d -p 80:80 doe-lab2
 ```
 
 ## Contributing
