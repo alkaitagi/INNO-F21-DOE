@@ -23,8 +23,8 @@ python app.py
 flask run
 
 # or building the docker image
-docker build -t doe-lab2 .
-docker run -d -p 5000:5000 doe-lab2
+docker build -t lab2 .
+docker run -d -p 5000:5000 lab2
 ```
 
 ## Contributing
