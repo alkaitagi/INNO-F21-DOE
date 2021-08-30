@@ -40,8 +40,8 @@ jobs:
 
       - name: Lint 🔎
         run: |
-          black --check .
+          python -m black .
 
       - name: Test 🪲
         run: |
-          pytest
+          python -m pytest
