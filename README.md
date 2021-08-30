@@ -1,4 +1,4 @@
-# Labs 1 & 2
+# Innopolis University fall 2021 DevOps Engineering course
 
 This is a simple python web application for displaying current Moscow time on page load. Written in Flask and contained in Docker.
 
@@ -13,7 +13,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-There are several ways to run the app
+There are several ways to run the app:
 
 ```bash
 # direct python launch
@@ -25,6 +25,14 @@ flask run
 # or building the docker image
 docker build -t lab2 .
 docker run -d -p 5000:5000 lab2
+```
+
+## Testing
+
+Unit tests are present:
+
+```bash
+python -m pytest
 ```
 
 ## Contributing
