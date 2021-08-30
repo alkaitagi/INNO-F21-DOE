@@ -1,4 +1,4 @@
-# Innopolis University fall 2021 DevOps Engineering course
+# DevOps Engineering labs
 
 This is a simple python web application for displaying current Moscow time on page load. Written in Flask and contained in Docker.
 
