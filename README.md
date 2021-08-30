@@ -17,7 +17,7 @@ There are several ways to run the app
 
 ```bash
 # direct python launch
-python app.py
+python main.py
 
 # or running the flask
 flask run
