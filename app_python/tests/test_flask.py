@@ -2,13 +2,12 @@ import re
 from main import app
 from world_time import get_time_string
 
+rtime = r"\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d"
+
 
 def test_time():
     time = get_time_string()
-    assert re.match(
-        r"\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d",
-        time,
-    )
+    assert re.match(rtime, time)
 
 
 def test_index():
@@ -16,6 +15,6 @@ def test_index():
         response = client.get("/")
         assert response.status_code == 200
         assert re.match(
-            r"<p>Time in Moscow</p><p>\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d</p>",
+            rf"<p>Time in Moscow</p><p>{rtime}</p>",
             response.data.decode("utf-8"),
         )
