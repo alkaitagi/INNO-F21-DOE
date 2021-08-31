@@ -3,7 +3,7 @@ pipeline {
         docker { image 'python:3.9-slim-buster' } 
     }
     stages {
-        stage('install dependencies') {
+        stage('install') {
             steps {
                 sh '''
                     python -m pip install --upgrade pip
