@@ -1,7 +1,7 @@
 pipeline {
-    agent { docker { image 'python:3.9-slim-buster' } }
+    agent any
     stages {
-        stage('install deps') {
+        stage('install dependencies') {
             steps {
                 sh '''
                     python -m pip install --upgrade pip
