@@ -11,10 +11,14 @@ pipeline {
         }
         stage('lint and test') {
             steps {
-                sh '''
-                    python -m black .
-                    python -m pytest
-                '''
+                parallel(
+                    lint: {
+                        sh 'python -m black .'
+                    },
+                    test: {
+                        sh 'python -m pytest'
+                    }
+                )
             }
         }
     }
