@@ -9,4 +9,3 @@
 - Create `root-less` user for security.
 - Expose `ports` to be able to connect to the app from outside.
 - Run `docker scan` to audit for security vulnerabilities.
-- Run `apt-get update && apt-get install` to make sure the system is up-to-date.
