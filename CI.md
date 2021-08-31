@@ -5,3 +5,4 @@
 - Install _only required_ dependencies.
 - Don't hardcode _secrets_ for security.
 - _Cache_ dependencies and build results.
+- Add _badges_ for showing actions status at glance.
