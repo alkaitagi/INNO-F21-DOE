@@ -3,6 +3,7 @@
 This is a simple python web application for displaying current Moscow time on page load. Written in Flask and contained in Docker.
 
 ![Tests](https://github.com/alkaitagi/INNO-F21-DOE/actions/workflows/python.yml/badge.svg)
+![Docker](https://github.com/alkaitagi/INNO-F21-DOE/actions/workflows/docker.yml/badge.svg)
 
 ## Installation
 
