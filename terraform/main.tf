@@ -7,7 +7,6 @@ terraform {
   }
 }
 
-# Example provided by the provider documentation
 resource "virtualbox_vm" "node" {
   count  = 2
   name   = format("node-%02d", count.index + 1)
