@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  flask_app:
+    image: alkaitagi/inno-f21-doe:latest
+    ports:
+      - "5000:5000"
