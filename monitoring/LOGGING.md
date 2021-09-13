@@ -47,3 +47,5 @@ Logging is done using the PLG stack (Promtail, Loki, and Grafana).
   ![Docker](./images/docker.png)
 - Loki logs:
   ![Loki](./images/loki.png)
+- Prometheus targets:
+  ![Prometheus](./images/prometheus.png)
