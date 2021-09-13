@@ -1,0 +1,37 @@
+version: "3.8"
+
+x-logging-config: &logging
+  logging:
+    driver: json-file
+    options:
+      tag: "{{.ImageName}}|{{.Name}}"
+  networks:
+    - loki
+
+services:
+  python_app:
+    image: alkaitagi/inno-f21-doe:latest
+    ports:
+      - 5000:5000
+    <<: *logging
+  loki:
+    image: grafana/loki:2.3.0
+    ports:
+      - 3100:3100
+    <<: *logging
+  grafana:
+    image: grafana/grafana:8.1.3
+    ports:
+      - 3000:3000
+    <<: *logging
+  promtail:
+    image: grafana/promtail:2.3.0
+    ports:
+      - 9080:9080
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - ./promtail-config.yml:/etc/promtail/config.yml:ro
+    <<: *logging
+
+networks:
+  loki:
