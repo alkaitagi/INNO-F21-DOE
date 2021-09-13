@@ -8,9 +8,11 @@ x-logging-config: &logging
   networks:
     - loki
 
-x-resources-limits: &resources
-  cpu: 0.5
-  mem_limit: "512M"
+# Unsupported config option for services.grafana: 'cpu'
+# Unsupported config option for services.loki: 'cpu'
+# Unsupported config option for services.prometheus: 'cpu'
+# Unsupported config option for services.promtail: 'cpu'
+# Unsupported config option for services.python_app: 'cpu'
 
 services:
   python_app:
@@ -18,19 +20,16 @@ services:
     ports:
       - 5000:5000
     <<: *logging
-    <<: *resources
   loki:
     image: grafana/loki:2.3.0
     ports:
       - 3100:3100
     <<: *logging
-    <<: *resources
   grafana:
     image: grafana/grafana:8.1.3
     ports:
       - 3000:3000
     <<: *logging
-    <<: *resources
   promtail:
     image: grafana/promtail:2.3.0
     ports:
@@ -39,7 +38,6 @@ services:
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - ./promtail-config.yml:/etc/promtail/config.yml:ro
     <<: *logging
-    <<: *resources
   prometheus:
     image: prom/prometheus:latest
     ports:
@@ -49,6 +47,6 @@ services:
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
     <<: *logging
-    <<: *resources
+
 networks:
   loki:
