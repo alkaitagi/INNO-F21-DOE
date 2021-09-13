@@ -12,7 +12,7 @@ Logging is done using the PLG stack (Promtail, Loki, and Grafana).
    ```
 
 2. Open Grafana at [http://localhost:3000/](`http://localhost:3000/`).
-3. Add Loki data source at [http://loki:3100/](http://loki:3100/).
+3. Add Loki data source from [http://loki:3100/](http://loki:3100/).
 4. See the logs at "Explore" tab.
 
 ## Best practices
