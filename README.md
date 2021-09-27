@@ -30,6 +30,11 @@ docker build -t inno-f21-doe:latest .
 docker run -d -p 5000:5000 inno-f21-doe:latest
 ```
 
+## Endpoints
+
+- `/`: Displays the current time in Moscow.
+- `/visits`: Displays the number of visits to the app.
+
 ## Testing
 
 Unit tests are present:
