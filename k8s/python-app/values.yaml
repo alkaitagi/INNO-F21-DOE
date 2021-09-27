@@ -12,8 +12,8 @@ image:
   workDir: home/app/files
 
 secrets:
-  name: python-secret
-  username: python-app # Change to your secret username
+  name: my-secret
+  username: python-app
 
 imagePullSecrets: []
 nameOverride: ""
