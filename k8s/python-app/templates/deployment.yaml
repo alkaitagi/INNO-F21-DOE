@@ -53,6 +53,13 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.secrets.name }}
                   key: username
+          volumeMounts:
+            - name: configmap-volume
+              mountPath: {{ .Values.image.workDir }}
+      volumes:
+        - name: configmap-volume
+          configMap:
+            name: {{ .Release.Name }}-configmap
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
