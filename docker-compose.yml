@@ -4,6 +4,6 @@ services:
   python_app:
     build: .
     ports:
-      - 80:5000
+      - 5000:5000
     volumes:
       - ./data/visits.json:/home/app/visits.json
